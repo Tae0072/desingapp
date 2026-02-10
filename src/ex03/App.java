@@ -1,18 +1,18 @@
 package ex03;
 
-// SOLID : 객체지향원칙 (D, O)
-// DIP : 추상적인 것에 의존하라.
-// OCP : 새로운 코드에는 OPEN, 기존 코드에는 CLOSE.
+import ex03.lib.OuterRabbit;
+
+// 어댑터 패턴 : 인터페이스에 맞게 변환해주는 역할
+// 용도 1: 이미 만들어진 도구가 인터페이스가 맞지 않아서 변환해서 연결하기 위해.
+// 용도 2: 아직 만들지 않은 도구를 미리 연결하기 위해.(인터페이스가 없다면)
 public class App {
     public static void main(String[] args) {
 
         Tiger tiger = new Tiger();
+        RabbitAdapter rabbit = new RabbitAdapter(new OuterRabbit());
         Doorman doorman = new Doorman();
-        Mouse mouse = new Mouse();
-        Snake snake = new Snake();
 
-        doorman.쫓아내(tiger);
-        doorman.쫓아내(mouse);
-        doorman.쫓아내(snake);
+        doorman.쫓아내(rabbit);
+
     }
 }
