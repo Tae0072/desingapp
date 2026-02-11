@@ -1,6 +1,6 @@
 package ex07.polling;
 
-public class Custormer1 {
+public class Customer1 {
 
     // 상품 있어?
     public void request(LotteMart lotteMart){

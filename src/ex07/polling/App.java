@@ -3,7 +3,7 @@ package ex07.polling;
 public class App {
     public static void main(String[] args) {
         LotteMart lm = new LotteMart();
-        Custormer1 cus1 = new Custormer1();
+        Customer1 cus1 = new Customer1();
 
         //1. 마트 입고 준비
         new Thread(() -> {
